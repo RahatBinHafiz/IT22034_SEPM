@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>পদার্থবিজ্ঞান কুইজ</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>পদার্থবিজ্ঞান কুইজে স্বাগতম</h1>
+    <form th:action="@{/quiz/validate}" method="post">
+        <div class="form-group">
+            <label for="studentId">শিক্ষার্থী আইডি:</label>
+            <input type="text" id="studentId" name="studentId" required>
+        </div>
+        <button type="submit">শুরু করুন</button>
+        <p th:if="${error}" class="error" th:text="${error}"></p>
+    </form>
+</div>
+</body>
+</html>

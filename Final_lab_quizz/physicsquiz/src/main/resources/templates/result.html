@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>কুইজ ফলাফল</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div class="container">
+  <h1>আপনার কুইজ ফলাফল</h1>
+  <p>শিক্ষার্থী আইডি: <span th:text="${studentId}"></span></p>
+  <p>আপনার স্কোর: <span th:text="${score} + '/' + ${total}"></span></p>
+  <a th:href="@{/quiz/start}">আরেকবার চেষ্টা করুন</a>
+</div>
+</body>
+</html>
